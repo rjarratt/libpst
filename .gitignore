@@ -65,3 +65,4 @@ CMakeLists.txt.user
 CMakeCache.txt
 cmake_install.cmake
 CMakeUserPresets.json
+!/config.h.in
