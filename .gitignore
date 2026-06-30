@@ -60,3 +60,8 @@ Makefile.in
 *.vcxproj*
 out/
 .github/
+CMakeFiles
+CMakeLists.txt.user
+CMakeCache.txt
+cmake_install.cmake
+CMakeUserPresets.json
