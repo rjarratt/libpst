@@ -38,6 +38,7 @@ Makefile.in
 /html.internal/
 /xml/libpst
 
+*.a
 *.o
 *.la
 *.lo
