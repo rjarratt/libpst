@@ -7,5 +7,8 @@
 #cmakedefine HAVE_ERRNO_H
 #cmakedefine HAVE_UNISTD_H
 #cmakedefine HAVE_ICONV
+#cmakedefine HAVE_REGEX_H
+#cmakedefine HAVE_DIRENT_H
+#cmakedefine HAVE_SYS_STAT_H
 
 #endif
