@@ -71,20 +71,20 @@ target_include_directories(readpst PRIVATE ${ICONV_INCLUDE_DIR})
 target_link_directories(readpst PRIVATE ${ICONV_LIBRARY_DIR})
 target_link_libraries(readpst PRIVATE pst ${LIBPST_EXTRA_LIBS})
 
-#add_executable(pst2ldif pst2ldif.cpp ${COMMON_HEADERS})
-#target_link_libraries(pst2ldif PRIVATE pst ${LIBPST_EXTRA_LIBS})
-#
-#add_executable(nick2ldif nick2ldif.cpp ${COMMON_HEADERS})
-#target_link_libraries(nick2ldif PRIVATE pst ${LIBPST_EXTRA_LIBS})
-#
-#add_executable(deltasearch deltasearch.cpp ${COMMON_HEADERS})
-#target_link_libraries(deltasearch PRIVATE pst ${LIBPST_EXTRA_LIBS})
-#
-#add_executable(dumpblocks dumpblocks.c ${COMMON_HEADERS})
-#target_link_libraries(dumpblocks PRIVATE pst ${LIBPST_EXTRA_LIBS})
-#
-#add_executable(getidblock getidblock.c ${COMMON_HEADERS})
-#target_link_libraries(getidblock PRIVATE pst ${LIBPST_EXTRA_LIBS})
+add_executable(pst2ldif pst2ldif.cpp ${COMMON_HEADERS})
+target_link_libraries(pst2ldif PRIVATE pst ${LIBPST_EXTRA_LIBS})
+
+add_executable(nick2ldif nick2ldif.cpp ${COMMON_HEADERS})
+target_link_libraries(nick2ldif PRIVATE pst ${LIBPST_EXTRA_LIBS})
+
+add_executable(deltasearch deltasearch.cpp ${COMMON_HEADERS})
+target_link_libraries(deltasearch PRIVATE pst ${LIBPST_EXTRA_LIBS})
+
+add_executable(dumpblocks dumpblocks.c ${COMMON_HEADERS})
+target_link_libraries(dumpblocks PRIVATE pst ${LIBPST_EXTRA_LIBS})
+
+add_executable(getidblock getidblock.c ${COMMON_HEADERS})
+target_link_libraries(getidblock PRIVATE pst ${LIBPST_EXTRA_LIBS})
 
 if(LIBPST_ENABLE_DII)
     find_library(GD_LIB gd)

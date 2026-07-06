@@ -44,9 +44,8 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 
 # Find tools / libs
-#find_package(PkgConfig REQUIRED)
-#pkg_check_modules(GSF QUIET libgsf-1)
-find_package(GSF REQUIRED) # if not installed, install libgsf-1-dev (Debian/Ubuntu)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GSF QUIET libgsf-1)
 find_package(ZLIB REQUIRED) # if not installed, install zlib1g-dev (Debian/Ubuntu)
 #find_package(Threads REQUIRED)
 
@@ -56,7 +55,7 @@ find_package(ZLIB REQUIRED) # if not installed, install zlib1g-dev (Debian/Ubunt
 # expose pkgconfig results for downstream
 if(GSF_FOUND)
     message(STATUS "Found libgsf: ${GSF_VERSION}")
-    foreach(_inc ${GSF_INCLUDE_DIR})
+    foreach(_inc ${GSF_INCLUDE_DIRS})
         list(APPEND EXTRA_INC ${_inc})
     endforeach()
     list(APPEND EXTRA_LIBS ${GSF_LIBRARIES})
